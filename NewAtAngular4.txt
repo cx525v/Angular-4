@@ -1,0 +1,41 @@
+Angular4 changes from Angular2
+1.Animations: add animation by importing {BrowserAnimationsModule} from @angular/platform-browser/animations into NgModule.
+
+2. *ngIf
+Angular2
+<div *ngIf="condi:tion">
+something
+</div>
+<div *ngIf="!condition">
+something eles
+</div>
+Angular4
+<div *ngIf="IsUpdate;then Update else InsertDelete"></div>
+<ng-template #Update>
+    <div> 
+    </div>
+ </ng-template>
+<ng-template #InsertDelete>
+    <div>        
+    </div>
+</ng-template>
+
+3. Email validation
+Angular4
+<input type ="email" name="email" required />
+
+
+4. Pipes
+{{'hello world' | titlecase}} 
+==>Hello World
+
+5.http
+http/get(url,{params:{sort:'ascending'}});
+
+6.Router
+const id = this.route.snapshot.paramMap.get('id');
+
+
+
+  
+
